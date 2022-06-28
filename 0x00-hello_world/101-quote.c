@@ -1,8 +1,3 @@
-/*
- * File: 101-quote.c
- * Auth: Seid Hamid
- */
-
 #include <unistd.h>
 
 /**
