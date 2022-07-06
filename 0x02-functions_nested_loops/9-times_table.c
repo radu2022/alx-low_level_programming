@@ -8,6 +8,7 @@ void times_table(void)
 {
 int digit, mult, result;
 for (digit = 0; digit <= 9; digit++)
+{
 _putchar('0');
 for (mult = 1; mult <= 9; mult++)
 {
