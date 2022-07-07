@@ -1,37 +1,36 @@
 #include "main.h"
 /**
- * print_number - prints a number
- * @n: Input number
+ * print_number - Print integer
+ * @n: number
  */
-
 void print_number(int n)
 {
 
-long len, res, i, temp, expo;
-res = n;
-expo = len =  1;
-/*Check negatives*/
-if (res < 0)
+unsigned int n2, number, base10 = 1;
+if (n < 0)
 {
-res *= -1;
 _putchar('-');
+n2 = -n;
 }
-/**/
-temp = res;
-while (temp >= 10)
+else
 {
-len++;
-temp /= 10;
+n2 = n;
 }
-/*Create Exponent*/
-for (i = 1; i < len; i++)
-expo *= 10;
-/*Main */
-while (expo > 1)
+number = n2;
+/* Obtenemos su base */
+while (number > 9)
 {
-_putchar((res / expo) % 10 + '0');
-expo /= 10;
+number = number / 10;
+base10 = base10 * 10;
 }
-_putchar(res % 10 + '0');
+/* Descomponemos en base 10*/
+number = n2;
+while (base10 > 1)
+{
+_putchar((number / base10) +'0');
+number = number % base10;
+base10 = base10 / 10;
+}
+_putchar((n2 % 10) + '0');
 
 }
