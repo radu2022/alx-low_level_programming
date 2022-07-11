@@ -1,10 +1,8 @@
- - More pointers, arrays and strings
+# C - Pointers, arrays and strings
 
 In this project, I continued to practice using pointers, arrays and strings in C.
 
 ## Tests :heavy_check_mark:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
 
 ## Helper File :raised_hands:
 
@@ -12,12 +10,12 @@ In this project, I continued to practice using pointers, arrays and strings in C
 
 ## Header File :file_folder:
 
-* [holberton.h](./holberton.h): Header file containing prototypes for all
+* [main.h](./main.h): Header file containing prototypes for all
 functions written in the project.
 
 | File                 | Prototype                                                      |
 | -------------------- | -------------------------------------------------------------- |
-| `0-strcat.c`         | `char *_strcat(char *dest, char *src);`                        |
+| `0-main.c`         | `char *_strcat(char *dest, char *src);`                        |
 | `1-strncat.c`        | `char *_strncat(char *dest, char *src, int n);`                |
 | `2-strncpy.c`        | `char *_strncpy(char *dest, char *src, int n);`                |
 | `3-strcmp.c`         | `int _strcmp(char *s1, char *s2);`                             |
