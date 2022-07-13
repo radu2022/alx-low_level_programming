@@ -27,11 +27,8 @@ functions written in the project.
 | `11-print_to_98.c`       | `void print_to_98(int n);`       |
 | `100-times_table.c`      | `void print_times_table(int n)`  |
 | `101-natural.c`	   | `int main(void)` |
-| `102-fibonacci.c` 	   | `int main(void)`
-|
-| `103-fibonacci.c`	   | `int main(void)`
-|
-| `104-fibonacci.c`	   | `int main(void)` |
+| `102-fibonacci.c` 	   | `int main(void)` | `103-fibonacci.c`	 | `int main(void)`
+| `104-fibonacci.c` 	   | `int main(void)` |
 
 ## Tasks :page_with_curl:
 
