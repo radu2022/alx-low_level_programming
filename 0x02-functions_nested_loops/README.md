@@ -26,12 +26,17 @@ functions written in the project.
 | `10-add.c`               | `int add(int, int);`             |
 | `11-print_to_98.c`       | `void print_to_98(int n);`       |
 | `100-times_table.c`      | `void print_times_table(int n)`  |
-| `101-natural.c`	   | `int main(void)` | `102-fibonacci.c`	 | `int main(void)` | `103-fibonacci.c`	       | `int main(void)` | `104-fibonacci.c`	     | `int main(void)` |
+| `101-natural.c`	   | `int main(void)` |
+| `102-fibonacci.c` 	   | `int main(void)`
+|
+| `103-fibonacci.c`	   | `int main(void)`
+|
+| `104-fibonacci.c`	   | `int main(void)` |
 
 ## Tasks :page_with_curl:
 
 * **0. _putchar**
-  * [0-holberton.c](./0-holberton.c): C program that prints `Holberton`, followed by a
+  * [0-main.c](./0-main.c): C program that prints `main`, followed by a
   new line. Returns 0.
 
 * **1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game**
