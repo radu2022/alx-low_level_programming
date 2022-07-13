@@ -3,17 +3,13 @@
 In this project, I learned about nested loops, header files, and variable scope
 in C while practicing declaring and defining my own functions.
 
-## Tests :heavy_check_mark:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
-
 ## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
 
 ## Header File :file_folder:
 
-* [holberton.h](./holberton.h): Header file containing prototypes for all
+* [main.h](./main.h): Header file containing prototypes for all
 functions written in the project.
 
 | File                     | Prototype                        |
@@ -30,6 +26,7 @@ functions written in the project.
 | `10-add.c`               | `int add(int, int);`             |
 | `11-print_to_98.c`       | `void print_to_98(int n);`       |
 | `100-times_table.c`      | `void print_times_table(int n)`  |
+| `101-natural.c`	   | `int main(void)` | `102-fibonacci.c`	 | `int main(void)` | `103-fibonacci.c`	       | `int main(void)` | `104-fibonacci.c`	     | `int main(void)` |
 
 ## Tasks :page_with_curl:
 
