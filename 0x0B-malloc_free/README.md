@@ -24,8 +24,11 @@
 * Write a function that frees a 2 dimensional grid previously created by your alloc\_grid function.
 
 
-### [./5-argstostr.c](./5-argstostr.c)
+### [./100-argstostr.c](./100-argstostr.c)
 * Write a function that concatenates all the arguments of your program.
+
+### [./101-strtow.c](./101-strtow.c)
+* Write a function that splits a string into words.
 
 ---
 
