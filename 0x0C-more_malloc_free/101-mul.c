@@ -1,5 +1,6 @@
-#include "bootcamp.h"
-#include <limits.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * str_len - finds string length
  * @str: input pointer to string
