@@ -14,8 +14,8 @@ void print_all(const char * const format, ...);
 typedef struct print
 {
 
-char *z;
-void (*f_func)(va_list);
+char *x;
+void (*T_func)(va_list);
 
 } t_print;
 
