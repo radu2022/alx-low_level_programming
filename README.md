@@ -10,6 +10,16 @@ This repository contains programs written for the low-level programming. The spe
 * [0x05. C - Pointers, arrays and strings](./0x05-pointers_arrays_strings)
 * [0x06. C - More pointers, arrays and strings](./0x06-pointers_arrays_strings)
 * [0x07. C - Even more pointers, arrays and strings](./0x07-pointers_arrays_strings)
+* [0x08. C - Recursion](./0x08-recursion)
+* [0x09. C - Static Libraries](./0x09-static_libraries)
+* [0x0A. C - Argc Argv](./0x0A-argc_argv)
+* [0x0B. C - Malloc Free](./0x0B-malloc_free-)
+* [0x0C. C - More Malloc Free](./0x0C-more_malloc_free-)
+* [0x0D. C - Preprocessor](./0x0D-preprocessor-)
+* [0x0E. C - Structures Typedof](./0x0E-structures_typedof)
+* [0x0F. C - Function Pointers](./0x0F-function_pointers)
+* [0x10. C - Variadic Functions](./0x10-variadic_functions)
+* [0x11. C -](./0x08-)
 
 ## Author :black_nib:
 
