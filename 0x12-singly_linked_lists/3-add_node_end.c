@@ -1,57 +1,51 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
-/**
- * _strlen - determines the string length
- * @str: given string
- *
- * Return: an integer length
- */
-int _strlen(const char *str)
-{
-int length = 0;
-while (str)
-length++;
-return (length);
-}
 
 /**
- * add_node_end - add a node at the end of list
- * @head: the head of the list
- * @str: a given string
+ * add_node_end - adds a node to the end of a list_t list
  *
- * Return: a pointer to the new element
+ * @head: node to add a node after
+ * @str: string to put in new node
+ *
+ * Return: address of new element
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-list_t *new_node;
-list_t *tmp;
-tmp = *head;
-if (!str)
-return (NULL);
-/* nod memeorty allocation */
-new_node = malloc(sizeof(list_t));
-if (new_node == NULL)
-return (NULL);
-/* Nod creation and initialization */
-new_node->next = NULL;
-new_node->str = strdup(str);
-/* check memory allocation for strdup */
-if (new_node->str == NULL)
+char *newstr, *ptr;
+list_t *newnode, *lastnode = NULL;
+int len = 0;
+if (str != NULL)
 {
-free(new_node);
+ptr = (char *) str;
+while (*ptr++)
+len++;
+newstr = malloc(sizeof(char) * (len + 1));
+if (newstr == NULL)
+return (NULL);
+ptr = newstr;
+while (*str)
+*ptr++ = *str++;
+}
+else
+newstr = NULL;
+if (*head != NULL)
+{
+lastnode = *head;
+while (lastnode->next != NULL)
+lastnode = lastnode->next;
+}
+newnode = malloc(sizeof(list_t));
+if (newnode == NULL)
+{
+free(newstr);
 return (NULL);
 }
-new_node->len = _strlen(str);
-/* checking if there is more than 2 elements(list exist) */
 if (*head == NULL)
-{
-*head = new_node;
-return (new_node);
-}
-/* searcing for n-1 last element of the list where to point */
-while (tmp->next)
-{
-tmp = tmp->next;
-tmp->next = new_node;
-}
-return (new_node);
+*head = newnode;
+if (lastnode != NULL)
+lastnode->next = newnode;
+newnode->str = newstr;
+newnode->len = len;
+return (newnode);
 }
