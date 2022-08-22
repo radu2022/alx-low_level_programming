@@ -220,7 +220,7 @@ while (address_size && !*(--buffer))
 --address_size;
 printf("%x", *buffer & 0xff);
 while (--address_size > 0)
-printf("%02x", *(--buffer) & 0xff);
+printf("%02x", *(--buffer)&0xff);
 }
 printf("\n");
 }
