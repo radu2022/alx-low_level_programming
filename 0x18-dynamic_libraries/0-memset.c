@@ -1,4 +1,7 @@
-#et - function that fills memory with a constant
+#include "main.h"
+
+/**
+**_memset - function that fills memory with a constant
 *@s:received a char
 *@b:a constant char
 *@n:received int
