@@ -1,6 +1,4 @@
-<img src="https://technologynewz.co.uk/wp-content/uploads/2021/1\
-0/Top-10-video-tutorial-to-learn-C-Programming-750x460.jpg" widt\
-h="600">                                                         
+<img src="https://prutor.ai/wp-content/uploads/c-programming-2-1024x353.jpg" width="400">                                         
                                                                  
 # Low-Level Programming - Data Structures, Algorithms, Linux/Uni\
 x System Programming                                             
@@ -32,7 +30,7 @@ ramming. The specific list of projects contained follows:
 
 ## Author :black_nib:
 
-* __Seid H Muhammmed__ <[radu2022](https://github.com/radu2022)>
+* __Seid Hamid Muhammmed__ <[radu2022](https://github.com/radu2022)>
 
 ## Acknowledgements :pray:
 
@@ -42,8 +40,9 @@ engineering program that prepares students for careers in the tech industry
 using project-based peer learning. For more information, visit
 [this link](https://www.alxafrica.com/).
 
-<p align="center">
-  <img
-    src="https://miro.medium.com/fit/c/176/176/1*E1LonYGC5Fx4QLY4W5SaVA.jpeg"
-    alt="alx logo">
-</p>
+----
+
+<div align="center">
+  <img src="https://lh3.googleusercontent.com/vH1HTHhq7BIEuhIDuEc2Wrc2LgZigsJEWDR56ALuDFRZv9-jqCgHNHuBHIB-fLrrbwp7tJ8b7qeIJo0VtHUh=s0" alt="ALX logo">
+</div>
+
