@@ -1,6 +1,15 @@
-# Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
-
-This repository contains programs written for the low-level programming. The specific list of projects contained follows:
+<img src="https://technologynewz.co.uk/wp-content/uploads/2021/1\
+0/Top-10-video-tutorial-to-learn-C-Programming-750x460.jpg" widt\
+h="600">                                                         
+                                                                 
+# Low-Level Programming - Data Structures, Algorithms, Linux/Uni\
+x System Programming                                             
+                                                                 
+This repository contains programs written for the low-level prog\
+ramming. The specific list of projects contained follows:        
+## ALX LOW LEVEL-PROGRAMMING                                     
+                                                                 
+## DIRECTORIES :file_folder:
 
 * [0x00. C - Hello, World](./0x00-hello_world)
 * [0x01. C - Variables, if, else, while](./0x01-variables_if_else_while)
