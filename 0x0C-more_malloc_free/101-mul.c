@@ -1,86 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+
+#define ERR_MSG "Error"
+
 /**
- * add - addition of parcial products
- * @p: parcial product
- * @mg: big malloc
- * @i: size of big malloc - 1
- * @tp: size of parcial product - 1
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ *
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
-void add(char *p, char *mg, int i, int tp)
+int is_digit(char *s)
 {
-int pos = tp, a = 0, b = 0, car = 0, res = 0;
-int cont = tp, aux = 0;
-for (; cont >=  0; cont--, i--, pos--)
+int i = 0;
+while (s[i])
 {
-a = *(p + pos) - '0';
-b = *(mg + i) - '0';
-res = (a + b)+car;
-car = res / 10;
-res = (res % 10) + '0';
-*(mg + i) = res;
+if (s[i] < '0' || s[i] > '9')
+return (0);
+i++;
 }
-res = 0;
-for (aux = i - 1; aux >= 0; aux--)
-{
-a = *(mg + aux) - '0';
-a += a + car;
-car = a / 10;
-a = (a % 10) + '0';
-*(mg + aux) = a;
+return (1);
 }
-}
+
 /**
- * setiar - fill the pointer with 0
- * @s: pointer
- * @a: size of pointer
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
  */
-void setiar(char *s, int a)
-{
-int i;
-for (i = 0; i < a; i++)
-s[i] = '0';
-}
-/**
- * parcial - give the parcial malloc
- * @a: size one
- * Return: parcial malloc
- */
-char *parcial(int a)
-{
-int i;
-char *p;
-p = malloc(a);
-if (!p)
-return (NULL);
-for (i = 0; i < a; i++)
-p[i] = '0';
-return (p);
-}
-/**
- * grande - give big malloc
- * @a: size one
- * @b: size two
- * Return: malloc
- */
-char *grande(int a, int b)
-{
-int i;
-char *p;
-p = malloc(a + b);
-if (!p)
-return (NULL);
-for (i = 0; i < a + b; i++)
-p[i] = '0';
-return (p);
-}
-/**
- * tama - give the size
- * @s: string of numbers
- * Return: size
- */
-int tama(char *s)
+int _strlen(char *s)
 {
 int i = 0;
 while (s[i] != '\0')
@@ -89,118 +37,62 @@ i++;
 }
 return (i);
 }
+
 /**
- * Perror - print Error with putchar.
- * Return: Always 0.
+ * errors - handles errors for main
  */
-void Perror(void)
+void errors(void)
 {
-_putchar('E');
-_putchar('r');
-_putchar('r');
-_putchar('o');
-_putchar('r');
-_putchar('\n');
+printf("Error\n");
 exit(98);
 }
+
 /**
- * numero - check if strings have only numbers.
- * @s: string 1
- * @a: string 2
- * Return: Always 1 if not or 0 if only has number.
- */
-void numero(char *s, char *a)
-{
-int i = 0, aux = 0;
-while (s[i] != '\0')
-{
-if (!(s[i] >= '0' && s[i] <= '9'))
-{
-aux = 1;
-break;
-}
-i++;
-}
-i = 0;
-while (a[i] != '\0')
-{
-if (!(a[i] >= '0' && a[i] <= '9'))
-{
-aux = 1;
-break;
-}
-i++;
-}
-if (aux == 1)
-Perror();
-if (*s == '0' || *a == '0')
-{
-_putchar('0');
-_putchar('\n');
-exit(0);
-}
-}
-/**
- * impresion - print the pointer
- * @s: string.
- * @a: size of string
- */
-void impresion(char *s, int a)
-{
-int i;
-for (i = 0; i < a; i++)
-{
-if (!(s[0] == '0' && i == 0))
-_putchar(s[i]);
-}
-_putchar('\n');
-}
-/**
- * main - check the code for Holberton School students.
- * @argv: array of pointers store the arguments
- * @argc: quantity of arguments
- * Return: Always 0.
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-int t1, t2, t3, a = 0, b = 0, j = 0, aux = 0, car, g, ind;
-char *mg, *p, *size1, *size2;
-if (argc != 3)
-Perror();
-else
-{ numero(argv[1], argv[2]);
-t1 = tama(argv[1]);
-t2 = tama(argv[2]);
-ind = t1 + t2;
-mg = grande(t1, t2);
-if (t1 >= t2)
-{ size1 = argv[1];
-size2 = argv[2];
-b = t1 - 1;
-a = t2 - 1;
-t3 = t1 + 1; }
-else
-{ size1 = argv[2];
-size2 = argv[1];
-b = t2 - 1;
-a = t1 - 1;
-t3 = t2 + 1; }
-g = b;
-p = parcial(t3);
-j = b + 1;
-for (; a >= 0; a--, ind--)
-{ car = 0;
-b = g;
-j = g + 1;
-setiar(p, t3);
-for (; b >= 0; b--, j--)
-{ aux = ((size2[a] - '0') * (size1[b] - '0'));
-aux = aux + car;
-p[j] = ((aux % 10) + '0');
-car = aux / 10; }
-p[j] = (car + '0');
-add(p, mg, (ind - 1), (t3 - 1)); }
-impresion(mg, (t1 + t2)); }
+char *s1, *s2;
+int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
+s1 = argv[1], s2 = argv[2];
+if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+errors();
+len1 = _strlen(s1);
+len2 = _strlen(s2);
+len = len1 + len2 + 1;
+result = malloc(sizeof(int) * len);
+if (!result)
+return (1);
+for (i = 0; i <= len1 + len2; i++)
+result[i] = 0;
+for (len1 = len1 - 1; len1 >= 0; len1--)
+{
+digit1 = s1[len1] - '0';
+carry = 0;
+for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+{
+digit2 = s2[len2] - '0';
+carry += result[len1 + len2 + 1] + (digit1 *digit2);
+result[len1 + len2 + 1] = carry % 10;
+carry /= 10;
+}
+if (carry > 0)
+result[len1 + len2 + 1] += carry;
+}
+for (i = 0; i < len - 1; i++)
+{
+if (result[i])
+a = 1;
+if (a)
+_putchar(result[i] + '0');
+}
+if (!a)
+_putchar('0');
+_putchar('\n');
+free(result);
 return (0);
-
 }
